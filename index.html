@@ -4,59 +4,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VYNE</title>
+
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0d0d0d;
+  font-family: 'Arial', sans-serif;
+  background: #0b0b0b;
   color: white;
 }
 
+/* NAVBAR */
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
   background: black;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 25px;
   text-decoration: none;
+  font-size: 14px;
 }
 
+/* HERO */
 .hero {
   height: 80vh;
+  background: url('hoodie-front.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #111;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
+  letter-spacing: 5px;
 }
 
+.hero p {
+  margin: 10px 0 20px;
+  letter-spacing: 2px;
+}
+
+.hero button {
+  padding: 12px 30px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+/* PRODUCTS */
 .products {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.grid {
   display: flex;
-  justify-content: center;
   gap: 30px;
-  padding: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: #1a1a1a;
+  background: #141414;
+  border-radius: 12px;
+  width: 260px;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 250px;
 }
 
 .card img {
@@ -64,18 +97,28 @@ nav a {
   border-radius: 10px;
 }
 
-button {
+.card h3 {
+  margin: 15px 0 5px;
+}
+
+.card p {
+  color: #aaa;
+}
+
+.card button {
   margin-top: 10px;
   padding: 10px 20px;
-  background: white;
   border: none;
+  background: white;
   cursor: pointer;
 }
 
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
   background: black;
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
 }
 </style>
 </head>
@@ -88,4 +131,50 @@ footer {
     <a href="#">Home</a>
     <a href="#">Shop</a>
     <a href="#">About</a>
-    <a
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>VYNE</h1>
+    <p>BUILT DIFFERENT</p>
+    <button>SHOP NOW</button>
+  </div>
+</section>
+
+<section class="products">
+  <h2>FEATURED PRODUCTS</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="tee.jpg" alt="Tee">
+      <h3>Star Tee</h3>
+      <p>$45.00</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="hoodie-front.jpg" alt="Hoodie">
+      <h3>Zip Hoodie</h3>
+      <p>$85.00</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="hoodie-back.jpg" alt="Hoodie Back">
+      <h3>Flame Hoodie</h3>
+      <p>$90.00</p>
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 VYNE. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
